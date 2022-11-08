@@ -1,8 +1,22 @@
 {{>layouts/header}}
-<form action="/articles/posts" method="post">
-    <input type="text" name="title">
-    <input type="text" name="content">
+
+<form class= "container" action="/articles/posts" method="post">
+    <div class="mb-3">
+    <label class="form-label">title</label><br>
+    <input type="text" name="title" placeholder="제목을 입력하세요." autofocus="autofocus"><br>
+    </div>
+
+    <div class ="mb-3">
+    <label class="form-label">content</label>
+    <textarea class="form-control" rows="3" name="content" placeholder="내용을 입력하세요." ></textarea>
+    </div>
+
     <button type="submit" class="btn btn-primary">Submit</button>
     <a href="/articles">back</a>
 </form>
+<br>
+<div style= "text-align: center" >
+<button type="button" class="btn btn-success"><a href="/articles/new" style= "color: white">new article</a></button>
+<button type="button" class="btn btn-warning"><a href="/articles" style= "color: white" >articles List</a></button>
+</div>
 {{>layouts/footer}}

@@ -1,0 +1,30 @@
+{{>layouts/header}}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+
+    <tbody class="table-group-divider">
+
+    {{#articles}} // list -> articles ( id / title / content)
+        <tr>
+            <th>{{id}}</th>
+            <td><a href="/articles/{{id}}">{{title}}</a></td>
+            <td>{{content}}</td>
+        </tr>
+    {{/articles}}
+    </tbody>
+
+</table>
+
+<div style= "text-align: center" >
+    <button type="button" class="btn btn-success"><a href="/articles/new" style= "color: white">new article</a></button>
+    <button type="button" class="btn btn-warning"><a href="/articles" style= "color: white" >articles List</a></button>
+</div>
+
+{{>layouts/footer}}
