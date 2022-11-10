@@ -1,5 +1,6 @@
 package com.mustache.bbs.domain.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -9,6 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Table(name="article")
+@AllArgsConstructor
 public class Article {
     @Id // entity 사용할때, 필수 primary key를 의미함
     @GeneratedValue(strategy = GenerationType.IDENTITY) //db에 id생성 자동으로 맡김
